@@ -1,22 +1,28 @@
 $(document).ready(function(){
    
-    let crystalOne;
-    let crystalTwo;
-    let crystalThree;
-    let crystalFour;
+
+
+    let crystalOne = "";
+    let crystalTwo = "";
+    let crystalThree = "";
+    let crystalFour = "";
     let total = 0;
     let target = 0;
     let wins = 0;
     let losses = 0;
+    let crystals = [];
 
+    initializeReset(); 
 
     function setTarget() {
       let upperLimitScore = 120;
       let lowerLimitScore = 19;
       target = Math.floor(Math.random() * (upperLimitScore-lowerLimitScore)) + lowerLimitScore;
       $("#target").html("Target: " + target);
-      // console.log(target);
+      console.log("Target: " + target);
     }
+
+    $(".btn").on("click", updateTotal);
 
     function updateTotal (){
       total += $(this).data("data-value");
@@ -31,8 +37,28 @@ $(document).ready(function(){
       let crystalCeiling = 12;
       let crystalFloor = 2;
       let crystalValue = Math.floor(Math.random() * (crystalCeiling-crystalFloor)) + crystalFloor;
+      crystals.push(crystalValue);
       return crystalValue;
     }  
+
+
+    function checkFairness (array, targetNumber) {
+        console.log("Checking fairness");
+        let fair = false;
+        array.forEach(function(value) {
+            if (targetNumber%value===0){
+                fair=true;
+            }
+        });
+        if (fair===false) {
+            console.log("game unfair");
+            initializeReset();
+        }
+        else {
+            console.log("game fair");
+        }
+
+    }
 
     function initializeReset (){
       crystalOne = $("[data-id=1]");
@@ -53,27 +79,20 @@ $(document).ready(function(){
       $("#total").html("Total: " + total);
       $("#wins").html("Wins: " + wins);
       $("#losses").html("Losses: " + losses);
+      checkFairness(crystals, target);
     }
 
   function winLose() {
     if (total === target) {
       wins++;
       $("#wins").html("Wins: " + wins);
-      console.log("You win!");
+      alert("You win!");
     } else {
       losses++;
       $("#losses").html("Losses: " + losses);
-      console.log("You lose!");
+      alert("You lose!");
     }
     initializeReset(); 
   }
-
-  $(".btn").on("click", updateTotal);
-
-
-
-    initializeReset(); 
-    
-
 
 })
