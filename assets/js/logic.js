@@ -18,13 +18,13 @@ $(document).ready(function(){
       // console.log(target);
     }
 
-
-   $(".btn").on("click", updateTotal);
-
     function updateTotal (){
       total += $(this).data("data-value");
       $("#total").html("Total: " + total);
-      //total = total + this.data("data-value");
+      if (total >= target) {
+        winLose();
+      }
+
     }
 
     function crystalRandom() {
@@ -47,8 +47,8 @@ $(document).ready(function(){
       crystalFour = $("[data-id=4]");
       crystalFour.data("data-value", crystalRandom()); 
       console.log("Crystal 4: " + crystalFour.data("data-value"));
-    
       setTarget();
+      total = 0;
       console.log("Target: " + target);
       $("#total").html("Total: " + total);
       $("#wins").html("Wins: " + wins);
@@ -56,8 +56,19 @@ $(document).ready(function(){
     }
 
   function winLose() {
-    
+    if (total === target) {
+      wins++;
+      $("#wins").html("Wins: " + wins);
+      console.log("You win!");
+    } else {
+      losses++;
+      $("#losses").html("Losses: " + losses);
+      console.log("You lose!");
+    }
+    initializeReset(); 
   }
+
+  $(".btn").on("click", updateTotal);
 
 
 
