@@ -1,6 +1,11 @@
+body {
+    background: #b0d6ff;
+}
+
 i {
     font-size: 6em;
-   
+    border: 2px solid #ccc;
+    border-radius: 10%;
     padding: 30px;
     
 }    
@@ -14,8 +19,15 @@ i {
 
 .btn-primary-outline {
     background-color: transparent;
-    border: 2px solid #ccc;
-    border-radius: 10%;
+
+}
+
+.btn {
+    display: inline-block;
+}
+
+.col-centered {
+    margin: 0 auto;
 }
 
 .button1{
