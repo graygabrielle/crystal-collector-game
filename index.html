@@ -10,18 +10,14 @@
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Quicksand" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src="./assets/js/logic.js"></script>
-    <title>Document</title>
+    <title>Snowflake Collector</title>
 </head>
 <body>
     <div class="container">
-        <!-- <div class="row">
-            <div class="jumbotron col-12">
-                Instructions
-            </div>
-        </div> -->
+
         <div class="row">
             <div class="col-3"></div>
             <div class="col-3" id="target">Target: </div>
@@ -29,7 +25,7 @@
             <div class="col-3"></div>
         </div>
         <div class="row">
-            <div class="col-3"></div>
+            <div class="col-3 title">Snowflake Collector</div>
             <div class="col-3">
                 <div class="btn btn-primary-outline btn-block button1" data-id=1 data-value=0><i class="far fa-snowflake"></i></div>
             </div>
@@ -37,7 +33,7 @@
             <div class="col-3">
                 <div class="btn btn-primary-outline btn-block button2" data-id=2 data-value=0><i class="far fa-snowflake"></i></div>
             </div>
-            <div class="col-3"></div>
+            <div class="col-3 directions">Each snowflake has a random value between 2 and 12. Click on the snowflakes to add to your total. To win, your total must match the target.</div>
         </div>
         <div class="row">
             <div class="col-3"></div>
@@ -47,7 +43,7 @@
             <div class="col-3">
                 <div class="btn btn-primary-outline btn-block button4" data-id=4 data-value=0><i class="far fa-snowflake"></i></div>
             </div>
-            <div class="col-3"></div>
+            <div class="col-3 directions">If your total goes over the target, you lose. At the beginning of a new round, the value of each snowflake will be reset.</div>
         </div>
         <div class="row">
             <div class="col-3"></div>

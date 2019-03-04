@@ -1,7 +1,7 @@
 body {
     background: #81aada;
     position: relative;
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     font-weight: bolder;
     height: 100%;
     margin: auto 0;
@@ -21,8 +21,22 @@ i {
 #wins, #losses, #total, #target {
     color: #000000a1;
     text-align: center;
-    font-size: 2em;
+    font-size: 2.5em;
     letter-spacing: 2px;
+}
+
+.directions {
+    line-height: 200%;
+    font-size: 1.1em;
+}
+
+.title {
+    font-size: 3em;
+    font-family: 'Abril Fatface', cursive;
+    padding-top: 20px;
+    text-align: center;
+
+   
 }
 
 .row {
