@@ -90,7 +90,7 @@ $(document).ready(function(){
     } else {
       losses++;
       $("#losses").html("Losses: " + losses);
-      alert("You lose!");
+      alert("You lose! Your total was: " + total + ". The target was: " + target);
     }
     initializeReset(); 
   }

@@ -1,0 +1,51 @@
+i {
+    font-size: 6em;
+   
+    padding: 30px;
+    
+}    
+
+.container {
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+}
+
+.btn-primary-outline {
+    background-color: transparent;
+    border: 2px solid #ccc;
+    border-radius: 10%;
+}
+
+.button1{
+    color: rgb(248, 186, 129);
+}
+
+.button1:hover {
+    color: white;
+}
+
+.button2{
+    color: rgb(171, 162, 255);
+}
+
+.button2:hover {
+    color: white;
+}
+
+.button3{
+    color: rgb(255, 166, 34);
+}
+
+.button3:hover {
+    color: white;
+}
+
+.button4{
+    color: rgb(250, 103, 66);
+}
+
+.button4:hover {
+    color: white;
+}
