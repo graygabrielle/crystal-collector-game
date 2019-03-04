@@ -86,11 +86,11 @@ $(document).ready(function(){
     if (total === target) {
       wins++;
       $("#wins").html("Wins: " + wins);
-      alert("You win!");
+      alert("You win! Press 'ok' to start a new round.");
     } else {
       losses++;
       $("#losses").html("Losses: " + losses);
-      alert("You lose! Your total was: " + total + ". The target was: " + target);
+      alert("You lose! Your total was: " + total + ". The target was: " + target + ". Press 'ok' to start a new round.");
     }
     initializeReset(); 
   }
